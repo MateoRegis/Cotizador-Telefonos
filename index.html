@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotizador de iPhone 13 PRO</title>
+    <link rel="stylesheet" href="/Cotizador-Telefonos/index.css">
+</head>
+<body>
+    <div class="contenedor">
+        <div class="imagen-producto">
+            <img id="imagen-iphone" src="iphone13.jpg" alt="iPhone 13 PRO">
+        </div>
+        <div class="detalles-producto">
+            <div class="contenido-detalles-producto">
+                <h2>Celulares</h2>
+                <form id="formulario-cotizacion">
+                    <div class="control-formulario">
+                        <label>Color</label>
+                        <select id="color" name="color" onchange="cambiarImagenProducto()">
+                            <option disabled selected value="0"> -- Seleccione una opción -- </option>
+                            <option value="grafito">Grafito</option>
+                            <option value="silver">Plata</option>
+                            <option value="sierra">Sierra Azul</option>
+                            <option value="gold">Oro</option>
+                        </select>
+                    </div>
+                    <div class="control-formulario">
+                        <label>Capacidad</label>
+                        <select id="capacidad" name="capacidad">
+                            <option disabled selected value="0"> -- Seleccione una opción -- </option>
+                            <option value="128">128 GB</option>
+                            <option value="256">256 GB</option>
+                            <option value="512">512 GB</option>
+                        </select>
+                    </div>
+                    <div class="control-formulario">
+                        <label>Cantidad</label>
+                        <input type="number" id="cantidad" name="cantidad" min="1" max="10" required />
+                    </div>
+                    <div class="control-formulario">
+                        <button type="button" onclick="calcularPrecio()">Cotizar</button>
+                    </div>
+                    <div id="resultado" class="control-formulario">
+                        Resultado de la cotización o error
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="/Cotizador-Telefonos/index.js"></script>
+</body>
+</html>
